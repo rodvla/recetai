@@ -1,7 +1,8 @@
 import streamlit as st
 from openai import OpenAI
+from env import API_KEY
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key=API_KEY)
 
 def generar_dieta(ingredientes):
   prompt = f"Genera una dieta semanal con los siguientes ingredientes: {ingredientes}"
